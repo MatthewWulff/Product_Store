@@ -1,13 +1,6 @@
-import React from "react"
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
-import { ThemeProvider } from "next-themes"
+import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 
 export function Provider({ children }) {
-  return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <ChakraProvider value={defaultSystem}>
-        {children}
-      </ChakraProvider>
-    </ThemeProvider>
-  )
+  return <ChakraProvider>{children}</ChakraProvider>;
 }
